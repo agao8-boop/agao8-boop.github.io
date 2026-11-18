@@ -15,7 +15,7 @@ header p{max-width:620px;margin-top:18px;font-size:18px;color:var(--muted)}
 section{padding:64px 0;border-bottom:1px solid var(--line)}
 .eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
 section>h2{font-size:34px;margin:8px 0 36px}
-.project{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;margin-bottom:64px}
+.project{max-width:680px;margin-bottom:56px}
 .project:last-child{margin-bottom:0}
 .project img{width:100%;border-radius:6px;display:block}
 .project .shot{max-height:420px;object-fit:cover;object-position:top}
