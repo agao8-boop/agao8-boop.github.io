@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects · Almanzo Gao</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<nav><a class="home" href="index.html">Almanzo Gao</a><a href="projects.html" aria-current="page">Projects</a><a href="manufacturing.html">Manufacturing</a><a href="3d-printing.html">3D printing</a></nav>
+
+<section id="geoloop">
+  <p class="eyebrow">Stanford CEE 299 · Advisor Peter Rumsey, P.E. · 2026</p>
+  <h2>GeoLoop</h2>
+  <div class="detail">
+    <p>GeoLoop answers one question for a building owner. Is a ground source heat pump feasible here? You enter a ZIP code and a building type. The tool returns a scored feasibility report in under 30 seconds. That analysis usually takes days.</p>
+    <p><a class="cta" href="https://geosite-advisor-442892847753.us-west1.run.app/" target="_blank" rel="noopener">Try the app ↗</a><a class="cta" href="https://github.com/agao8-boop/geoloop" target="_blank" rel="noopener">Code on GitHub ↗</a></p>
+    <h3>How it works</h3>
+    <ul>
+      <li>Site: geocodes the ZIP code and looks up soil thermal properties.</li>
+      <li>Simulation: loads EnergyPlus prototype loads for the building type and climate zone.</li>
+      <li>Loads: converts them into three-pulse ground loads.</li>
+      <li>Sizing: sizes the borefield with the ASHRAE method of Philippe et al. (2010).</li>
+      <li>Cost: applies a nine line-item cost model with regional drilling rates by state.</li>
+      <li>Strategy: tests hybrid systems with load duration curves and sizes a peaking unit.</li>
+      <li>Report: gives a 0 to 100 feasibility score and the payback.</li>
+    </ul>
+    <img class="wide" src="images/projects/geoloop-strategy.jpg" alt="GeoLoop hybrid strategy screen comparing a base borefield with a smaller hybrid borefield" style="max-width:360px">
+    <p class="cap">The strategy step compares the base borefield with a smaller hybrid design.</p>
+    <h3>Results</h3>
+    <ul>
+      <li>840 EnergyPlus runs across 16 building types, 16 ASHRAE climate zones, and 21 envelope variants feed the load tables.</li>
+      <li>405 test cases pass against published reference spreadsheets.</li>
+      <li>For a 50,000 sf office in Chicago, a GSHP with the 30% IRA tax credit has the lowest 20-year life cycle cost. It costs $1.16M against $1.47M for a gas boiler, with 2.3x lower CO₂ intensity.</li>
+    </ul>
+    <p>I reviewed the method with my advisor, Peter Rumsey, P.E. We refined the drilling cost structure, the peak-shaving logic, and the thermal balance strategy.</p>
+  </div>
+</section>
+
+<section id="fresno">
+  <p class="eyebrow">ArcGIS StoryMap · Stanford CEE 276M · April 2026</p>
+  <h2>Where the Power Goes in Fresno County</h2>
+  <div class="detail">
+    <p>I built this StoryMap for CEE 276M, Spatial Mapping for Giga-Scale Renewables and Transmission. It asks where solar can go in Fresno County. It also asks where each option conflicts with land use and equity.</p>
+    <p><a class="cta" href="https://arcg.is/1GD0fe0" target="_blank" rel="noopener">Open the StoryMap ↗</a></p>
+    <h3>What the story covers</h3>
+    <ul>
+      <li>Environmental burden by census tract from CalEnviroScreen 4.0. The highest scores cluster in the urban core of Fresno.</li>
+      <li>How the county generates power today, from gas and from renewables.</li>
+      <li>How much solar resource is in use near each substation.</li>
+      <li>Where solar siting conflicts with farmland, critical habitat, wetlands, and biodiversity areas.</li>
+    </ul>
+  </div>
+  <img class="wide" src="images/projects/fresno-storymap.jpg" alt="Map of solar resource utilization in Fresno County with substations and candidate solar areas">
+  <p class="cap">Solar resource utilization, with substations and candidate solar areas.</p>
+  <img class="wide" src="images/projects/fresno-landuse.jpg" alt="Map of solar siting environmental risk and land use conflicts in Fresno County">
+  <p class="cap">Environmental risk and land-use conflicts for solar siting.</p>
+</section>
+
+<footer>
+  <p><a href="index.html">← Back to home</a> · <a href="mailto:agao8@stanford.edu">agao8@stanford.edu</a> · <a href="https://www.linkedin.com/in/almanzo-gao" target="_blank" rel="noopener">LinkedIn</a></p>
+</footer>
+</main>
+</body>
+</html>

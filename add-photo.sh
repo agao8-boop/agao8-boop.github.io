@@ -1,5 +1,5 @@
 #!/bin/sh
-# Usage: ./add-photo.sh ~/Desktop/IMG_1234.HEIC sunland-1
+# Usage: ./add-photo.sh ~/Desktop/IMG_1234.HEIC 3d/my-print   (folders: projects, manufacturing, 3d)
 # Converts any photo (HEIC/PNG/JPG) to a web-sized JPEG at images/<name>.jpg
 # and strips location/camera metadata. Uses macOS built-in sips, nothing to install.
 set -e

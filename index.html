@@ -8,51 +8,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#faf8f4;--ink:#1d1c1a;--muted:#6b675f;--line:#e4dfd5;--accent:#b4462f}
-*{box-sizing:border-box;margin:0}
-body{background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif}
-main{max-width:980px;margin:0 auto;padding:0 20px}
-a{color:inherit}
-h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:500;line-height:1.15}
-nav{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:flex-end;padding:22px 0;font-size:14px;white-space:nowrap}
-nav a{text-decoration:none;color:var(--muted)} nav a:hover{color:var(--ink)}
-header{padding:64px 0 72px;border-bottom:1px solid var(--line)}
-header h1{font-size:clamp(44px,8vw,76px)}
-header p{max-width:620px;margin-top:18px;font-size:18px;color:var(--muted)}
-.links{display:flex;flex-wrap:wrap;gap:18px;margin-top:26px;font-size:15px}
-.links a{text-underline-offset:4px;text-decoration-color:var(--accent)}
-section{padding:64px 0;border-bottom:1px solid var(--line)}
-.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
-section>h2{font-size:34px;margin:8px 0 36px}
-.project{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center;margin-bottom:64px}
-.project:last-child{margin-bottom:0}
-.project img{width:100%;border-radius:6px;display:block}
-.project .shot{max-height:420px;object-fit:cover;object-position:top}
-.project h3{font-size:28px}
-.project .meta{font-size:13px;color:var(--muted);margin:6px 0 14px}
-.project p{margin-bottom:12px}
-.project ul{padding-left:18px;color:var(--muted);font-size:15px;margin-bottom:16px}
-.cta{display:inline-block;margin-right:18px;font-weight:600;font-size:15px;color:var(--accent);text-decoration:none}
-.cta:hover{text-decoration:underline}
-.lede{max-width:640px;margin:-20px 0 32px;color:var(--muted)}
-.facts{display:flex;flex-wrap:wrap;gap:32px;margin-bottom:36px}
-.facts b{display:block;font-family:Newsreader,serif;font-weight:500;font-size:32px;color:var(--ink)}
-.facts span{font-size:13px;color:var(--muted)}
-.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
-.gallery figure{margin:0}
-.gallery img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;display:block;background:var(--line)}
-.gallery figcaption{font-size:13px;color:var(--muted);margin-top:6px}
-.more{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px 40px}
-.more h3{font-size:20px}
-.more p{font-size:15px;color:var(--muted);margin-top:4px}
-footer{padding:40px 0 56px;font-size:13px;color:var(--muted)}
-@media (max-width:720px){.project{grid-template-columns:1fr;gap:20px}.project .shot{max-height:360px}}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
-<nav><a href="#projects">Projects</a><a href="#manufacturing">Manufacturing</a><a href="#making">3D printing</a><a href="#contact">Contact</a></nav>
+<nav><a href="projects.html">Projects</a><a href="manufacturing.html">Manufacturing</a><a href="3d-printing.html">3D printing</a><a href="#contact">Contact</a></nav>
 
 <header>
   <h1>Almanzo Gao</h1>
@@ -69,9 +29,9 @@ footer{padding:40px 0 56px;font-size:13px;color:var(--muted)}
   <h2>Things I built</h2>
 
   <article class="project">
-    <img class="shot" src="images/geoloop-report.jpg" alt="GeoLoop feasibility report showing a score of 52 out of 100 and a borefield site plan">
+    <img class="shot" src="images/projects/geoloop-report.jpg" alt="GeoLoop feasibility report showing a score of 52 out of 100 and a borefield site plan">
     <div>
-      <h3>GeoLoop</h3>
+      <h3><a href="projects.html#geoloop">GeoLoop</a></h3>
       <p class="meta">Stanford CEE 299 independent study · Advisor Peter Rumsey, P.E. · 2026</p>
       <p>GeoLoop answers one question for a building owner. Is a ground source heat pump feasible here? You enter a ZIP code and a building type. It returns a scored feasibility report in under 30 seconds.</p>
       <ul>
@@ -80,17 +40,18 @@ footer{padding:40px 0 56px;font-size:13px;color:var(--muted)}
         <li>405 passing validation test cases</li>
       </ul>
       <a class="cta" href="https://geosite-advisor-442892847753.us-west1.run.app/" target="_blank" rel="noopener">Try the app ↗</a>
-      <a class="cta" href="https://github.com/agao8-boop/geoloop" target="_blank" rel="noopener">Code ↗</a>
+      <a class="cta" href="projects.html#geoloop">More details</a>
     </div>
   </article>
 
   <article class="project">
-    <img src="images/fresno-storymap.jpg" alt="Map of solar resource utilization in Fresno County with substations and candidate solar areas">
+    <img src="images/projects/fresno-storymap.jpg" alt="Map of solar resource utilization in Fresno County with substations and candidate solar areas">
     <div>
-      <h3>Where the Power Goes in Fresno County</h3>
+      <h3><a href="projects.html#fresno">Where the Power Goes in Fresno County</a></h3>
       <p class="meta">ArcGIS StoryMap · Stanford CEE 276M · 2026</p>
       <p>A geospatial suitability analysis for solar in Fresno County. It compares utility-scale, ground-mounted, and rooftop solar. It also maps where each option creates land-use and equity conflicts.</p>
       <a class="cta" href="https://arcg.is/1GD0fe0" target="_blank" rel="noopener">Open the StoryMap ↗</a>
+      <a class="cta" href="projects.html#fresno">More details</a>
     </div>
   </article>
 </section>
@@ -105,27 +66,25 @@ footer{padding:40px 0 56px;font-size:13px;color:var(--muted)}
     <div><b>0.4% → 67%</b><span>nickel recovery</span></div>
     <div><b>Zero</b><span>liquid discharge evaporation design</span></div>
   </div>
-  <!-- ponytail: drop photos in images/ with these names; a missing file hides itself -->
-  <div class="gallery">
-    <figure><img src="images/sunland-1.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Production line</figcaption></figure>
-    <figure><img src="images/sunland-2.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Recovery experiments in the lab</figcaption></figure>
-    <figure><img src="images/sunland-3.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"><figcaption>On site</figcaption></figure>
-    <figure><img src="images/sunland-4.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"><figcaption>The plant's solar station</figcaption></figure>
+  <div class="gallery tall">
+    <figure><img src="images/manufacturing/suiting-up.jpg" alt="Almanzo in a white protective suit and helmet lamp" loading="lazy"><figcaption>Preparing to enter the rotary kiln</figcaption></figure>
+    <figure><img src="images/manufacturing/inside-kiln.jpg" alt="A worker in a protective suit inside a rotary kiln" loading="lazy"><figcaption>Inside the "tiny" rotary kiln</figcaption></figure>
+    <figure><img src="images/manufacturing/iron-rings.jpg" alt="Crouching inside the kiln to inspect the lining" loading="lazy"><figcaption>Checking the iron rings</figcaption></figure>
+    <figure><img src="images/manufacturing/kiln-opening.jpg" alt="View through a round opening into the kiln" loading="lazy"><figcaption>A view through the kiln opening</figcaption></figure>
   </div>
+  <a class="cta" href="manufacturing.html">More about my time at Sunland</a>
 </section>
 
 <section id="making">
   <p class="eyebrow">Making</p>
   <h2>3D printing</h2>
-  <p class="lede">I model in Fusion 360 and print small objects. Most of them are gifts or things I use every day.</p>
+  <p class="lede">I model in Fusion 360 and print small objects. Some are for fun and some are for class experiments.</p>
   <div class="gallery">
-    <figure><img src="images/print-1.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Vase</figcaption></figure>
-    <figure><img src="images/print-2.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Jewelry box</figcaption></figure>
-    <figure><img src="images/print-3.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Orchid</figcaption></figure>
-    <figure><img src="images/print-4.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Can opener</figcaption></figure>
-    <figure><img src="images/print-5.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Candle</figcaption></figure>
-    <figure><img src="images/print-6.jpg" alt="" loading="lazy" onerror="this.parentNode.remove()"><figcaption>Hand mirror</figcaption></figure>
+    <figure><img src="images/3d/wind-turbine.jpg" alt="Small printed wind turbine mounted in a wind tunnel test section" loading="lazy"><figcaption>Wind turbine for a fluids experiment</figcaption></figure>
+    <figure><img src="images/3d/silk-wave.jpg" alt="Purple silk-finish printed square with a wave surface, held in a hand" loading="lazy"><figcaption>Silk wave, printed for fun</figcaption></figure>
+    <figure><img src="images/3d/shell-boxes.jpg" alt="Four purple printed boxes shaped like a heart, a flower, a conch, and a scallop" loading="lazy"><figcaption>Even more fun: shell, heart, and flower boxes</figcaption></figure>
   </div>
+  <a class="cta" href="3d-printing.html">See all prints</a>
 </section>
 
 <section>
